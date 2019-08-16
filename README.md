@@ -1,0 +1,1 @@
+Create social network app with react & typescript & styled components.
