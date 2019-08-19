@@ -1,7 +1,16 @@
-import { BackgroundColorProps, StateColorProps, TextColorProps } from './colorsProps';
+import { BackgroundColorProps, MainColorProps, StateColorProps, TextColorProps } from './colorsProps';
+
+export const Main: MainColorProps = {
+    Main: {
+        green: '#32b38c',
+        dark: '#292929',
+        light: '#f2f3f7',
+        brown: '#393836',
+    }
+};
 
 export const Text: TextColorProps = {
-    Gray: {
+    Text: {
         dark: '#333',
         light: '#ccc',
         middle: '#666',
@@ -12,15 +21,16 @@ export const Text: TextColorProps = {
 export const State: StateColorProps = {
     State: {
         active: '#26a69a',
-        error: '#f04e65'
+        error: '#b0455d'
     }
 };
 
 export const Background: BackgroundColorProps = {
     Background: {
         dark: '#263238',
-        light: '#f2f3f7'
+        light: '#DDDEEE'
     }
 };
 
-export const ColorPalette = {...Text, ...State, ...Background};
+
+export const ColorPalette = {...Main, ...Text, ...State, ...Background};

@@ -6,7 +6,7 @@ interface StateColorProps {
 }
 
 interface TextColorProps {
-    Gray: {
+    Text: {
         dark: string;
         light: string;
         middle: string;
@@ -18,6 +18,15 @@ interface BackgroundColorProps {
     Background: {
         dark: string;
         light: string;
+    };
+}
+
+export interface MainColorProps {
+    Main: {
+        green: string;
+        dark: string;
+        light: string;
+        brown: string;
     };
 }
 
