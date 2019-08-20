@@ -1,19 +1,24 @@
 import * as React from 'react';
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { faUserCircle } from '@fortawesome/free-solid-svg-icons';
-import { MainHeader, Navigation } from './header.style';
+import { HeaderLogoLink, MainHeader, MainHeaderContainer } from './header.style';
 import { Logo } from '../../icons/logo';
 import { User } from '../user/user';
-
-library.add(faUserCircle);
+import { Navigation } from '../navigation/navigation';
+import { RoutingEnum } from '../../routing-enum/routing-enum';
+import { HeaderMenu } from '../header-menu/header-menu';
 
 export class Header extends React.Component {
     public render(): React.ReactNode {
         return (
             <MainHeader>
-                <Logo />
-                <Navigation />
-                <User />
+                <MainHeaderContainer>
+                    <HeaderLogoLink to={RoutingEnum.defaultPage}>
+                        <Logo />
+                        <span>Home</span>
+                    </HeaderLogoLink>
+                    <HeaderMenu />
+                    <Navigation />
+                    <User />
+                </MainHeaderContainer>
             </MainHeader>
         );
     }

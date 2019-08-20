@@ -1,4 +1,4 @@
-import { css } from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const FlexCenter = css`
     display: flex;
@@ -16,4 +16,8 @@ export const AbsoluteCenter = css`
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+`;
+
+export const FlexWrapper = styled.div`
+    ${FlexVerticalCenter};
 `;

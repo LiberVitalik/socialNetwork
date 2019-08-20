@@ -1,7 +1,12 @@
 import * as React from 'react';
-import { UserName, UserPhoto, UserWrapper } from './user.style';
+import { UserName, UserNameIcon, UserPhoto, UserWrapper } from './user.style';
 import { UserProps } from './user.props';
-import { RoutingEnum } from '../../types/types';
+import { RoutingEnum } from '../../routing-enum/routing-enum';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faAngleDown, faAngleUp } from '@fortawesome/free-solid-svg-icons';
+
+library.add(faAngleUp);
+library.add(faAngleDown);
 
 export class User extends React.Component<UserProps, {}> {
     public render(): React.ReactNode {
@@ -11,7 +16,11 @@ export class User extends React.Component<UserProps, {}> {
 
         return (
             <UserWrapper>
-                <UserName to={RoutingEnum.profile}>{name || 'Unknown User'}</UserName>
+                <UserName to={RoutingEnum.profile}>
+                    {name || 'Unknown User'}
+                    {false && <UserNameIcon icon={faAngleUp} />}
+                    {true && <UserNameIcon icon={faAngleDown} />}
+                </UserName>
                 <form>
                     <UserPhoto photo={photo || DEFAULT_PHOTO}>
                         <input type={'file'} />

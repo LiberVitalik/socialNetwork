@@ -1,40 +1,60 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import { ColorPalette } from '../../theme/colors/colors';
-import { FlexVerticalCenter } from '../../theme/commot-style/common-style';
-
-const HeaderSpacer = css`
-    position: relative;
-    
-    &:after {
-        content: '';
-        width: 1px;
-        height: 100%;
-        background: ${ColorPalette.Main.light};
-        margin: 10px;
-    }
-`;
+import { Link } from 'react-router-dom';
+import { FlexCenter } from '../../theme/commot-style/common-style';
 
 export const MainHeader = styled.header`
-    ${FlexVerticalCenter};
-    
     width: 100%;
     height: 60px;
     position: fixed;
     top: 0;
     left: 0;
-    padding: 0 2%;
     background: ${ColorPalette.Main.green};
     color: ${ColorPalette.Main.light};
-    
-    svg {
-        width: 40px;
-        height: 40px;
-        fill: ${ColorPalette.Main.light};
-    }
-    
-    ${HeaderSpacer};
 `;
 
-export const Navigation = styled.section`
+export const MainHeaderContainer = styled.div`
+    height: 100%;
+    padding: 0 24px;
+    display: grid;
+    grid-auto-columns: 60px  60px 120px 1fr;
+    grid-template-areas: 'HeaderLogoLink HeaderMenuItem Navigation User';
     
+    svg {
+        width: 28px;
+        height: 28px;
+        fill: ${ColorPalette.Main.light};
+        
+        path { 
+            transition: fill .2s ease; 
+        }
+    }
+`;
+
+export const HeaderLogoLink = styled(Link)`
+    width: 60px;
+    height: 100%;
+    grid-area: HeaderLogoLink;
+    text-decoration: none;
+    flex-direction: column;
+    
+    ${FlexCenter};
+    
+    span {
+        font-size: 10px;
+        color: ${ColorPalette.Main.light};
+        text-transform: uppercase;
+        margin-top: 2px;
+        transition: fill .2s ease;
+    }
+    
+    &:hover {
+        svg {
+            fill: ${ColorPalette.Main.brown};
+        }
+        
+        span {
+            color: ${ColorPalette.Main.brown};
+        }
+    }
 `;
