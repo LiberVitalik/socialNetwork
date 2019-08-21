@@ -7,6 +7,7 @@ import { Main } from './App.style';
 import { RoutingEnum } from '../routing-enum/routing-enum';
 import { Friends } from '../components/friends/friends';
 import { Message } from '../components/message/message';
+import { PersonInfo } from '../components/person-info/person-info';
 
 export default class App extends Component {
 
@@ -15,6 +16,7 @@ export default class App extends Component {
             <BrowserRouter>
                 <Header />
                 <Main>
+                    <PersonInfo />
                     <Route path={RoutingEnum.profile} component={Profile} />
                     <Route path={RoutingEnum.friends} component={Friends} />
                     <Route path={RoutingEnum.message} component={Message} />

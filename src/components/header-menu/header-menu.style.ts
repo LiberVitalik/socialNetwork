@@ -11,6 +11,7 @@ export const BarsIcon = styled(FontAwesomeIcon)`
 export const CloseIcon = styled(FontAwesomeIcon)`
     font-size: 32px;
     transition: color .2s ease;
+    color: ${ColorPalette.Main.brown};
 `;
 
 export const HeaderMenuItem = styled.button`
