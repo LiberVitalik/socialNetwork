@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import { ColorPalette } from '../colors/colors';
 
 export const FlexCenter = css`
     display: flex;
@@ -21,3 +22,17 @@ export const AbsoluteCenter = css`
 export const FlexWrapper = styled.div`
     ${FlexVerticalCenter};
 `;
+
+export const HeaderBorder = (side: string = 'right') => {
+    return `border-${side}: 1px solid ${ColorPalette.Text.middle}`
+};
+
+export const GetEllipsis = (maxWidth: number = 150) => {
+    return `
+        display: block;
+        max-width: ${maxWidth}px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    `
+};

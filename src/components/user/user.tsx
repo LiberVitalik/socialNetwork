@@ -17,7 +17,7 @@ export class User extends React.Component<UserProps, {}> {
         return (
             <UserWrapper>
                 <UserName to={RoutingEnum.profile}>
-                    {name || 'Unknown User'}
+                    <span>{name || 'Unknown User'}</span>
                     {false && <UserNameIcon icon={faAngleUp} />}
                     {true && <UserNameIcon icon={faAngleDown} />}
                 </UserName>

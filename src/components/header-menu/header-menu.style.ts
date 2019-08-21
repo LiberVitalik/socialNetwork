@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { FlexCenter } from '../../theme/commot-style/common-style';
+import { FlexCenter, HeaderBorder } from '../../theme/commot-style/common-style';
 import { ColorPalette } from '../../theme/colors/colors';
 
 export const BarsIcon = styled(FontAwesomeIcon)`
@@ -21,6 +21,8 @@ export const HeaderMenuItem = styled.button`
     color: ${ColorPalette.Main.light};
     grid-area: HeaderMenuItem;
     cursor: pointer;
+    
+    ${HeaderBorder()};
     
     &:focus,
     &:active {

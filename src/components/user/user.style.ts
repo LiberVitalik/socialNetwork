@@ -1,23 +1,30 @@
 import styled from 'styled-components';
-import { FlexVerticalCenter } from '../../theme/commot-style/common-style';
+import { FlexVerticalCenter, GetEllipsis, HeaderBorder } from '../../theme/commot-style/common-style';
 import { SansPro } from '../../theme/fonts/fonts';
 import { ColorPalette } from '../../theme/colors/colors';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export const UserWrapper = styled.div`
-    height: 100%;
+    ${HeaderBorder('left')};
     ${FlexVerticalCenter};
-    justify-content: flex-end;
+    
+    height: 100%;
+    grid-area: User;
 `;
 
 export const UserName = styled(Link)`
+    ${FlexVerticalCenter};
+    
     font-family: ${SansPro.regular};
     color: ${ColorPalette.Main.light};
     text-decoration: none;
-    ${FlexVerticalCenter};
-    grid-area: User;
     transition: color .2s ease;
+    margin: 0 6px 0 12px;
+    
+    span {
+        ${GetEllipsis(200)};
+    }
     
     svg {
         transition: color .2s ease;

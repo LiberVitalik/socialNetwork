@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { ColorPalette } from '../../theme/colors/colors';
 import { Link } from 'react-router-dom';
-import { FlexCenter } from '../../theme/commot-style/common-style';
+import { FlexCenter, HeaderBorder } from '../../theme/commot-style/common-style';
 
 export const MainHeader = styled.header`
     width: 100%;
@@ -15,10 +15,11 @@ export const MainHeader = styled.header`
 
 export const MainHeaderContainer = styled.div`
     height: 100%;
-    padding: 0 24px;
+    padding: 0 12px;
+    
     display: grid;
-    grid-auto-columns: 60px  60px 120px 1fr;
-    grid-template-areas: 'HeaderLogoLink HeaderMenuItem Navigation User';
+    grid-auto-columns: 60px  60px auto 1fr auto;
+    grid-template-areas: 'HeaderLogoLink HeaderMenuItem Navigation . User';
     
     svg {
         width: 28px;
@@ -38,6 +39,7 @@ export const HeaderLogoLink = styled(Link)`
     text-decoration: none;
     flex-direction: column;
     
+    ${HeaderBorder()};
     ${FlexCenter};
     
     span {
