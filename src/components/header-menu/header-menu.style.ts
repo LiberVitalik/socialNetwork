@@ -15,8 +15,8 @@ export const CloseIcon = styled(FontAwesomeIcon)`
 `;
 
 export const HeaderMenuItem = styled.button`
-    width: 60px;
     ${FlexCenter};
+    width: 60px;
     border: none;
     background: transparent;
     color: ${ColorPalette.Main.light};

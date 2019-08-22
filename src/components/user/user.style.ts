@@ -50,13 +50,13 @@ export const UserNameIcon = styled(FontAwesomeIcon)`
     margin: 3px 8px 0;
 `;
 
-export const UserPhoto = styled.label<{ photo?: string }>`
+export const UserPhoto = styled.label<{ photo: string }>`
     display: block;
-    width: 40px;
+    width: 40px;  
     height: 40px;
     border-radius: 50%;
     color: ${ColorPalette.Main.light};
-    background: ${({photo}) => photo ? `url(${photo})` : ''} no-repeat 50% 50%;
+    background: ${({photo}) => `url(${photo})`} no-repeat 50% 50%;
     background-size: cover;
     border: 1px solid ${ColorPalette.Main.light};
     cursor: pointer;

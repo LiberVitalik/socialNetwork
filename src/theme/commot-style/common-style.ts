@@ -1,6 +1,8 @@
 import styled, { css } from 'styled-components';
 import { ColorPalette } from '../colors/colors';
 
+export const Block = styled.div``;
+
 export const FlexCenter = css`
     display: flex;
     justify-content: center;

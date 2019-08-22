@@ -21,13 +21,13 @@ export const Text: TextColorProps = {
 export const State: StateColorProps = {
     State: {
         active: '#26a69a',
-        error: '#b0455d'
+        error: '#fba387'
     }
 };
 
 export const Background: BackgroundColorProps = {
     Background: {
-        dark: '#263238',
+        dark: 'rgba(58,77,83,0.91)',
         light: '#DDDEEE'
     }
 };

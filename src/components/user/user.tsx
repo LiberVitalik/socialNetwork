@@ -4,6 +4,7 @@ import { UserProps, UserState } from './user.props';
 import { RoutingEnum } from '../../routing-enum/routing-enum';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faAngleDown, faAngleUp } from '@fortawesome/free-solid-svg-icons';
+import { DefaultPersonInfo } from '../../data/default-data';
 
 library.add(faAngleUp);
 library.add(faAngleDown);
@@ -16,19 +17,18 @@ export class User extends React.Component<UserProps, UserState> {
 
     public render(): React.ReactNode {
 
-        const DEFAULT_PHOTO = 'https://bizraise.pro/wp-content/uploads/2014/09/no-avatar-300x300.png';
         const { name, photo } = this.props;
         const { isUserOpen } = this.state;
 
         return (
             <UserWrapper>
                 <UserName to={RoutingEnum.profile} onClick={this.toggleUserInfo}>
-                    <span>{name || 'Unknown User'}</span>
+                    <span>{name || DefaultPersonInfo.name}</span>
                     {isUserOpen && <UserNameIcon icon={faAngleUp} />}
                     {!isUserOpen && <UserNameIcon icon={faAngleDown} />}
                 </UserName>
                 <form>
-                    <UserPhoto photo={photo || DEFAULT_PHOTO}>
+                    <UserPhoto photo={photo || DefaultPersonInfo.photoUrl}>
                         <input type={'file'} />
                     </UserPhoto>
                 </form>

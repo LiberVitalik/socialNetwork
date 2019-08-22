@@ -26,7 +26,7 @@ export const NavigationLink = styled(Link)`
     
     &:hover {
         svg {
-            color: ${ColorPalette.Main.brown};
+            color: ${ColorPalette.Background.dark};
         }
     }
 `;
