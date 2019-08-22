@@ -3,6 +3,7 @@ import { NavigationIcon, NavigationLink, NavigationWrapper } from './navigation.
 import { RoutingEnum } from '../../routing-enum/routing-enum';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faCommentAlt, faUserFriends } from '@fortawesome/free-solid-svg-icons';
+import { HeaderMenu } from '../header-menu/header-menu';
 
 library.add(faUserFriends);
 library.add(faCommentAlt);
@@ -17,6 +18,7 @@ export class Navigation extends React.Component<{}, {}> {
                 <NavigationLink to={RoutingEnum.message}>
                     <NavigationIcon icon={faCommentAlt} />
                 </NavigationLink>
+                <HeaderMenu />
             </NavigationWrapper>
         );
     }

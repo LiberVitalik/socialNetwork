@@ -15,6 +15,7 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { faCircleNotch, faCommentAlt, faUserCheck } from '@fortawesome/free-solid-svg-icons';
 import { DefaultPersonInfo } from '../../data/default-data';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { PersonMenu } from '../person-menu/person-menu';
 
 library.add(faCircleNotch);
 library.add(faCommentAlt);
@@ -45,7 +46,7 @@ export class PersonInfo extends React.Component<PersonInfoProps, {}> {
                         </PersonInfoActiveChat>
                     </PersonInfoActiveWrapper>
                 </PersonInfoContainer>
-                <h3>This is PersonInfo component</h3>
+                <PersonMenu />
             </PersonInfoWrapper>
         );
     }

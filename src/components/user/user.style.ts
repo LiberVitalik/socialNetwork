@@ -17,9 +17,8 @@ export const UserName = styled(Link)`
     ${FlexVerticalCenter};
     
     font-family: ${SansPro.regular};
-    color: ${ColorPalette.Main.light};
+    color: ${ColorPalette.Background.dark};
     text-decoration: none;
-    transition: color .2s ease;
     margin: 0 6px 0 12px;
     
     span {
@@ -32,16 +31,11 @@ export const UserName = styled(Link)`
     
     &:active,
     &:focus {
-        color: ${ColorPalette.Main.light}
+        color: ${ColorPalette.Background.dark}
     }
     
     &:hover {
         text-decoration: underline;
-        color: ${ColorPalette.Main.brown};
-        
-        svg {
-            color: ${ColorPalette.Main.brown};
-        }
     }
 `;
 
@@ -55,14 +49,13 @@ export const UserPhoto = styled.label<{ photo: string }>`
     width: 40px;  
     height: 40px;
     border-radius: 50%;
-    color: ${ColorPalette.Main.light};
     background: ${({photo}) => `url(${photo})`} no-repeat 50% 50%;
     background-size: cover;
     border: 1px solid ${ColorPalette.Main.light};
     cursor: pointer;
     
     &:hover {
-        border: 1px solid ${ColorPalette.Main.brown};
+        border: 1px solid ${ColorPalette.Background.dark};
     }
     
     input {

@@ -10,7 +10,6 @@ export const MainHeader = styled.header`
     top: 0;
     left: 0;
     background: ${ColorPalette.Main.green};
-    color: ${ColorPalette.Main.light};
 `;
 
 export const MainHeaderContainer = styled.div`
@@ -18,13 +17,13 @@ export const MainHeaderContainer = styled.div`
     padding: 0 12px;
     
     display: grid;
-    grid-auto-columns: 60px  60px auto 1fr auto;
-    grid-template-areas: 'HeaderLogoLink HeaderMenuItem Navigation . User';
+    grid-auto-columns: 232px auto 1fr auto;
+    grid-template-areas: 'HeaderLogoLink Navigation . User';
     
     svg {
         width: 28px;
         height: 28px;
-        fill: ${ColorPalette.Main.light};
+        fill: ${ColorPalette.Background.dark};
         
         path { 
             transition: fill .2s ease; 
@@ -33,18 +32,19 @@ export const MainHeaderContainer = styled.div`
 `;
 
 export const HeaderLogoLink = styled(Link)`
-    width: 60px;
+    width: calc(232px - 12px);
     height: 100%;
     grid-area: HeaderLogoLink;
     text-decoration: none;
     flex-direction: column;
+    box-sizing: border-box;
     
     ${HeaderBorder()};
     ${FlexCenter};
     
     span {
         font-size: 10px;
-        color: ${ColorPalette.Main.light};
+        color: ${ColorPalette.Background.dark};
         text-transform: uppercase;
         margin-top: 2px;
         transition: fill .2s ease;
@@ -52,11 +52,11 @@ export const HeaderLogoLink = styled(Link)`
     
     &:hover {
         svg {
-            fill: ${ColorPalette.Main.brown};
+            fill: ${ColorPalette.Main.light};
         }
         
         span {
-            color: ${ColorPalette.Main.brown};
+            color: ${ColorPalette.Main.light};
         }
     }
 `;

@@ -26,7 +26,7 @@ export const FlexWrapper = styled.div`
 `;
 
 export const HeaderBorder = (side: string = 'right') => {
-    return `border-${side}: 1px solid ${ColorPalette.Text.middle}`
+    return `border-${side}: 1px solid ${ColorPalette.Background.dark}`
 };
 
 export const GetEllipsis = (maxWidth: number = 150) => {

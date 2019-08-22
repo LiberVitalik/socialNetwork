@@ -4,7 +4,6 @@ import { Logo } from '../../icons/logo';
 import { User } from '../user/user';
 import { Navigation } from '../navigation/navigation';
 import { RoutingEnum } from '../../routing-enum/routing-enum';
-import { HeaderMenu } from '../header-menu/header-menu';
 
 export class Header extends React.Component {
     public render(): React.ReactNode {
@@ -15,7 +14,6 @@ export class Header extends React.Component {
                         <Logo />
                         <span>Home</span>
                     </HeaderLogoLink>
-                    <HeaderMenu />
                     <Navigation />
                     <User />
                 </MainHeaderContainer>

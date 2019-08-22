@@ -1,12 +1,14 @@
 import styled from 'styled-components';
 import { ColorPalette } from '../../theme/colors/colors';
 import { SansPro } from '../../theme/fonts/fonts';
-import { FlexCenter, GetEllipsis } from '../../theme/commot-style/common-style';
+import { FlexCenter, GetEllipsis, HeaderBorder } from '../../theme/commot-style/common-style';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export const PersonInfoWrapper = styled.aside`
     width: 232px;
     background: ${ColorPalette.Main.brown};
+    box-sizing: border-box;
+    ${HeaderBorder()};
 `;
 
 export const PersonInfoPhoto = styled.div<{ photo: string }>`
@@ -70,10 +72,6 @@ export const PersonInfoActiveWrapper = styled.div`
         cursor: pointer;
         border-radius: 2px;
         border: none;
-        
-        &:hover {
-            outline: 1px solid ${ColorPalette.Main.light};
-        }
         
         svg {
             margin-right: 8px;

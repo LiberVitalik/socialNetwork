@@ -2,23 +2,19 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { ColorPalette } from '../../theme/colors/colors';
-import { FlexCenter, HeaderBorder } from '../../theme/commot-style/common-style';
+import { FlexCenter } from '../../theme/commot-style/common-style';
 
 export const NavigationWrapper = styled.nav`
     height: 100%;
     grid-area: Navigation;
     padding: 0 12px;
     
-    ${HeaderBorder()};
     ${FlexCenter};
 `;
 
 export const NavigationLink = styled(Link)`
     display: block;
-    
-    &:not(:last-child) {
-        margin-right: 12px;
-    }
+    padding: 8px;
     
     svg {
         transition: color .2s ease;
@@ -26,12 +22,12 @@ export const NavigationLink = styled(Link)`
     
     &:hover {
         svg {
-            color: ${ColorPalette.Background.dark};
+            color: ${ColorPalette.Main.light};
         }
     }
 `;
 
 export const NavigationIcon = styled(FontAwesomeIcon)`
-    color: ${ColorPalette.Main.light};
-    font-size: 28px;
+    color: ${ColorPalette.Background.dark};
+    font-size: 24px;
 `;
