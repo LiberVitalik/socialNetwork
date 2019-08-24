@@ -11,6 +11,7 @@ import { PersonInfo } from '../components/person-info/person-info';
 import { Group } from '../components/group/group';
 import { News } from '../components/news/news';
 import { Photos } from '../components/photos/photos';
+import { FriendsBlock } from '../components/friends-block/friends-block';
 
 export default class App extends Component {
 
@@ -28,6 +29,7 @@ export default class App extends Component {
                         <Route path={RoutingEnum.news} component={News} />
                         <Route path={RoutingEnum.photos} component={Photos} />
                     </Content>
+                    <FriendsBlock />
                 </Main>
             </BrowserRouter>
         );

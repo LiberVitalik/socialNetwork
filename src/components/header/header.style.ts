@@ -14,10 +14,8 @@ export const MainHeader = styled.header`
 
 export const MainHeaderContainer = styled.div`
     height: 100%;
-    padding: 0 12px;
-    
     display: grid;
-    grid-auto-columns: 232px auto 1fr auto;
+    grid-auto-columns: 232px auto 1fr 260px;
     grid-template-areas: 'HeaderLogoLink Navigation . User';
     
     svg {
@@ -32,12 +30,13 @@ export const MainHeaderContainer = styled.div`
 `;
 
 export const HeaderLogoLink = styled(Link)`
-    width: calc(232px - 12px);
+    width: 232px;
     height: 100%;
     grid-area: HeaderLogoLink;
     text-decoration: none;
     flex-direction: column;
     box-sizing: border-box;
+    padding-left: 12px;
     
     ${HeaderBorder()};
     ${FlexCenter};

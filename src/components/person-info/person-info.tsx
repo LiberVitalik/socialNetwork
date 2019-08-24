@@ -23,7 +23,7 @@ library.add(faUserCheck);
 
 export class PersonInfo extends React.Component<PersonInfoProps, {}> {
     public render(): React.ReactNode {
-        const { name, photo, isOnline = false } = this.props;
+        const { name, photo, active } = this.props;
 
         return (
             <PersonInfoWrapper>
@@ -32,7 +32,7 @@ export class PersonInfo extends React.Component<PersonInfoProps, {}> {
                     <PersonInfoNameBlock>
                         <Block>{this.convertName(name || DefaultPersonInfo.name)}</Block>
                         <PersonInfoStatusWrapper>
-                            <PersonInfoStatus icon={faCircleNotch} isOnline={isOnline}   />
+                            <PersonInfoStatus icon={faCircleNotch} active={active}   />
                         </PersonInfoStatusWrapper>
                     </PersonInfoNameBlock>
                     <PersonInfoActiveWrapper>
@@ -52,6 +52,8 @@ export class PersonInfo extends React.Component<PersonInfoProps, {}> {
     }
 
     private convertName = (name: string) => {
-        return name.split(' ').map(namePart => <PersonInfoName>{namePart}</PersonInfoName>)
+        return name.split(' ').map((namePart: string, index: number) => {
+            return <PersonInfoName key={index}>{namePart}</PersonInfoName>;
+        })
     }
 }

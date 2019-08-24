@@ -7,6 +7,7 @@ export const Main = styled.div`
     margin-top: 60px;
     background: ${ColorPalette.Background.light};
     display: flex;
+    justify-content: space-between;
 `;
 
 export const Content = styled.div`

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { FlexVerticalCenter, GetEllipsis, HeaderBorder } from '../../theme/commot-style/common-style';
+import { FlexCenter, FlexVerticalCenter, GetEllipsis, HeaderBorder } from '../../theme/commot-style/common-style';
 import { SansPro } from '../../theme/fonts/fonts';
 import { ColorPalette } from '../../theme/colors/colors';
 import { Link } from 'react-router-dom';
@@ -7,10 +7,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export const UserWrapper = styled.div`
     ${HeaderBorder('left')};
-    ${FlexVerticalCenter};
-    
+    ${FlexCenter};
     height: 100%;
     grid-area: User;
+    padding-right: 12px;
 `;
 
 export const UserName = styled(Link)`

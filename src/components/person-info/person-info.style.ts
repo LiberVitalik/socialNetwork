@@ -49,9 +49,9 @@ export const PersonInfoStatusWrapper = styled.div`
     align-items: center;
 `;
 
-export const PersonInfoStatus = styled(FontAwesomeIcon)<{isOnline: boolean}>`
+export const PersonInfoStatus = styled(FontAwesomeIcon)<{active: boolean}>`
     font-size: 18px;
-    color: ${({isOnline}) => isOnline ? `${ColorPalette.Main.green}` : `${ColorPalette.State.error}`};
+    color: ${({active}) => active ? `${ColorPalette.Main.green}` : `${ColorPalette.State.error}`};
 `;
 
 export const PersonInfoActiveWrapper = styled.div`
