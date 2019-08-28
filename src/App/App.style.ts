@@ -9,7 +9,3 @@ export const Main = styled.div`
     display: flex;
     justify-content: space-between;
 `;
-
-export const Content = styled.div`
-    
-`;
